@@ -47,7 +47,7 @@ module.exports = function() {
 				},
 				
 				somar: function(numero1, numero2) {
-					return numero1 + numero2;
+					return numero1 + numero1;
 				},
 
 				gerar: function(numero1) {
