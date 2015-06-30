@@ -9,7 +9,7 @@ module.exports = function() {
 				return resposta;
 			},
 
-			enviarEmail: function() {
+			enviarEmail: function(resposta) {
 				// Enviando e-mails usando o Node.js e o famoso nodemailer
 				var nodemailer = require('nodemailer');
 				 
@@ -83,7 +83,7 @@ module.exports = function() {
 				var parametros = Controller.utils.extrairParametros(request.body);
 				var resultado  = Controller.utils.calculos.calcular(parametros);
 				var resposta   = Controller.utils.formatarResposta(resultado);
-				var email 	   = Controller.utils.enviarEmail();
+				var email 	   = Controller.utils.enviarEmail(resposta);
 				
 				response.render(parametros.operacao, resposta);
 			}
