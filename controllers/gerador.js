@@ -19,16 +19,16 @@ module.exports = function() {
 				                      // na documentação do nodemailer como utilizar
 				                      // os outros serviços
 				    auth: {
-				        user: 'carlosaugustoandradesouza@gmail.com', // Seu usuário no Gmail
-				        pass: '******' // A senha da sua conta no Gmail :-)
+				        user: 'geradordesenhassimpatia@gmail.com', // Seu usuário no Gmail
+				        pass: '5OmnwL6uYtbhBVu' // A senha da sua conta no Gmail :-)
 				    }
 				});
 				 
 				conta.sendMail({
 				    from: 'Gerador de Senhas <carlosaugustoandradesouza@gmail.com>', // Quem está mandando
 				    to: 'Você <carlosaugustoandradesouza@gmail.com>', // Para quem o e-mail deve chegar
-				    subject: 'Estou testando seu gist', // O assunto
-				    html: '<strong>Oi Alan!</strong><p>Estou testando seu gist para enviar e-mails, amo você!</p>', // O HTMl do nosso e-mail
+				    subject: 'Testando envio de e-mails', // O assunto
+				    html: '<strong>Olá Carlos</strong><p>Testando o envio de e-mails, amo você!</p>', // O HTMl do nosso e-mail
 				}, function(err){
 				    if(err)
 				        throw err;
@@ -83,7 +83,7 @@ module.exports = function() {
 				var parametros = Controller.utils.extrairParametros(request.body);
 				var resultado  = Controller.utils.calculos.calcular(parametros);
 				var resposta   = Controller.utils.formatarResposta(resultado);
-				//var email 	   = Controller.utils.enviarEmail();
+				var email 	   = Controller.utils.enviarEmail();
 				
 				response.render(parametros.operacao, resposta);
 			}
