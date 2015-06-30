@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+  - "0.12"
+deploy:
+  provider: heroku
+  api_key:
+    secure: f49f6db3-bd66-4251-8682-847021bdc1dd
+  app: stark-badlands-2612
+  on:
+    repo: CarlosTWMF/geradordesenhas

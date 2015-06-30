@@ -1,0 +1,35 @@
+{
+  "name": "node-app",
+  "version": "1.0.0",
+  "description": "Gerador de Senhas",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CarlosTWMF/geradordesenhas.git"
+  },
+  "author": "Carlos Augusto",
+  "bugs": {
+    "url": "https://github.com/CarlosTWMF/geradordesenhas/issues"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "./node_modules/mocha/bin/mocha"
+  },
+  "engines": {
+    "node": "0.12.2"
+  },
+  "homepage": "https://github.com/CarlosTWMF/geradordesenhas",
+  "dependencies": {
+    "accounting": "^0.4.1",
+    "body-parser": "^1.12.4",
+    "ejs": "^2.3.1",
+    "express": "^4.12.4",
+    "express-load": "^1.1.14",
+    "nodemailer": "^1.4.0",
+    "randomstring": "^1.0.6"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.5",
+    "should": "^6.0.3"
+  }
+}
