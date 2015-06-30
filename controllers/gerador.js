@@ -83,7 +83,7 @@ module.exports = function() {
 				var parametros = Controller.utils.extrairParametros(request.body);
 				var resultado  = Controller.utils.calculos.calcular(parametros);
 				var resposta   = Controller.utils.formatarResposta(resultado);
-				var email 	   = Controller.utils.enviarEmail();
+				//var email 	   = Controller.utils.enviarEmail();
 				
 				response.render(parametros.operacao, resposta);
 			}
