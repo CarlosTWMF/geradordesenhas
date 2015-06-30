@@ -2,9 +2,11 @@ module.exports = function() {
 	var Controller = {
 		utils: {
 			formatarResposta: function(resultado) {
+				/*
 				var resposta   = {
 					resultado: 0.0
 				};
+				*/
 				resposta.resultado = resultado;
 				return resposta;
 			},
