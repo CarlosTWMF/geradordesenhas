@@ -8,3 +8,12 @@ module.exports = function(app) {
 	
 	app.post('/calcular', controller.post.calcular);
 };
+/*
+module.exports = function(app) {
+	var controller = app.controllers.enviador;
+	
+	app.get('/enviar', controller.get.enviar);
+	//app.get('/sobre', controller.get.sobre);
+
+};
+*/
