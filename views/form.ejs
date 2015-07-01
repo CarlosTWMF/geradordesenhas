@@ -46,6 +46,7 @@
                         <p>Que tal guardar esta senha super simpática? Preencha os campos abaixo e não se preoupe em lembrá-la. É só procurá-la no seu e-mail!</p>
                         <br />
                         <form action="/enviar" method="post">
+                            <input type="hidden" value="<%= resultado %>" name="senha">
                             <input type="text" class="form-control" placeholder="Nome do Site" name="nome" >
                             <br />
                             <input type="text" class="form-control" placeholder="voce@email.com" name="email" >

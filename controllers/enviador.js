@@ -1,7 +1,7 @@
 module.exports = function() {
 	var Controller = {
 
-		enviarEmail: function(nome, email) {
+		enviarEmail: function(nome, email, senha) {
 			// Enviando e-mails usando o Node.js e o famoso nodemailer
 			var nodemailer = require('nodemailer');
 			 
@@ -20,7 +20,7 @@ module.exports = function() {
 			    from: 'Gerador de Senhas <geradordesenhassimpatia@gmail.com>', // Quem está mandando
 			    to: 'Você <'+ email +'>', // Para quem o e-mail deve chegar
 			    subject: 'Testando envio de e-mails', // O assunto
-			    html: '<strong>Olá</strong><p>Esta é a sua senha para o site' + nome + '!</p>', // O HTMl do nosso e-mail
+			    html: '<strong>Olá</strong><p>Esta é a sua senha para o site ' + nome + ' : ' + senha + '</p>', // O HTMl do nosso e-mail
 			}, function(err){
 			    if(err)
 			        throw err;
@@ -33,7 +33,8 @@ module.exports = function() {
 			enviarEmail: function(request, response) {
 				var nome = request.body.nome;
 				var email = request.body.email;
-				Controller.enviarEmail(nome, email);
+				var senha = request.body.senha;
+				Controller.enviarEmail(nome, email, senha);
 				response.render("form", { "success" : "Enviado!" });
 			}
 		}
