@@ -17,11 +17,10 @@
                     <br />
                     <br />
                     <form action="/calcular" method="post">
-                     	<input type="hidden" name="operacao" value="<%- operacao %>" />
 						<div class="input-group col-lg-6" >
-							<input type="text" class="form-control" placeholder="32" name="numero1" >
+							<input type="text" class="form-control" placeholder="32" name="numero1" id="txtQuantidade" >
 							<span class="input-group-btn">
-							<button class="btn btn-default" type="submit">Gerar Senha</button>
+							<button class="btn btn-default" type="submit" id="btnGerarSenha">Gerar Senha</button>
 							</span>
 						</div><!-- /input-group -->
 					</form>
@@ -37,7 +36,7 @@
                 <div class="well">
                     <% if(typeof(resultado) != 'undefined') { %>
 						<h3>Esta é a sua senha</h3>
-						<p><%= resultado %></p>
+						<p id="senhaGerada"><%= resultado %></p>
                         <br />
                         <br />
                         <!--
@@ -47,7 +46,6 @@
                         <p>Que tal guardar esta senha super simpática? Preencha os campos abaixo e não se preoupe em lembrá-la. É só procurá-la no seu e-mail!</p>
                         <br />
                         <form action="/enviar" method="post">
-                            <input type="hidden" name="operacao" value="<%- operacao %>" />
                             <input type="text" class="form-control" placeholder="Nome do Site" name="nome" >
                             <br />
                             <input type="text" class="form-control" placeholder="voce@email.com" name="email" >
@@ -55,7 +53,6 @@
                             <button class="btn btn-default" type="submit">Envie para o meu e-mail!</button>
                         </form>
 
-						<!--<input type="text" name="numero1" value="<%= resultado %>" />-->
 					<% } %>
                 </div>
 

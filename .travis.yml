@@ -1,6 +1,8 @@
 language: node_js
 node_js:
   - "0.12"
+service_name: travis-ci.org
+repo_token: 6iIdksPlIq72kTXlqKOpbnzDU4QSIT1iF
 deploy:
   provider: heroku
   api_key:

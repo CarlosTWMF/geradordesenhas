@@ -38,11 +38,9 @@ module.exports = function() {
 			},
 			
 			calculos: {
-				calcular: function(parametros) {
+				calcular: function(numero1) {
 					var randomstring = require("randomstring");
-					var numero1 = parametros.numero1;
-					var resultado = Controller.utils.calculos[parametros.operacao](numero1);
-					resultado = randomstring.generate(resultado);
+					var resultado = randomstring.generate(numero1);
 					return resultado;
 				},
 				
@@ -80,12 +78,9 @@ module.exports = function() {
 		
 		post: {
 			calcular: function(request, response) {
-				var parametros = Controller.utils.extrairParametros(request.body);
-				var resultado  = Controller.utils.calculos.calcular(parametros);
-				var resposta   = Controller.utils.formatarResposta(resultado);
-				//var email 	   = Controller.utils.enviarEmail();
-				
-				response.render(parametros.operacao, resposta);
+				var numero1 = request.body.numero1;
+				var resultado  = Controller.utils.calculos.calcular(numero1);
+				response.render("form", { "resultado" : resultado });
 			}
 		}
 	};
