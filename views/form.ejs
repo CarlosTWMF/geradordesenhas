@@ -52,6 +52,9 @@
                             <br />
                             <button class="btn btn-default" type="submit">Envie para o meu e-mail!</button>
                         </form>
+                        <% if(typeof(success) != 'undefined') { %>
+                            <h3><%= success %></h3>
+                        <% } %>
 
 					<% } %>
                 </div>
