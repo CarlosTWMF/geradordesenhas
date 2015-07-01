@@ -1,30 +1,25 @@
 module.exports = function() {
 	var Controller = {
 
-		enviarEmail: function(nome, email, senha) {
-			// Enviando e-mails usando o Node.js e o famoso nodemailer
+		enviarEmail: function(nome, site, email, senha) {
 			var nodemailer = require('nodemailer');
 			 
-			// Vamos criar a conta que irá mandar os e-mails
 			var conta = nodemailer.createTransport({
-			    service: 'Gmail', // Existem outros services, você pode procurar
-			                      // na documentação do nodemailer como utilizar
-			                      // os outros serviços
+			    service: 'Gmail',
 			    auth: {
-			        user: 'geradordesenhassimpatia@gmail.com', // Seu usuário no Gmail
-			        pass: '5OmnwL6uYtbhBVu' // :-)
+			        user: 'geradordesenhassimpatia@gmail.com',
+			        pass: '5OmnwL6uYtbhBVu' // Seja bonzinho com isso... :-)
 			    }
 			});
 			 
 			conta.sendMail({
-			    from: 'Gerador de Senhas <geradordesenhassimpatia@gmail.com>', // Quem está mandando
-			    to: 'Você <'+ email +'>', // Para quem o e-mail deve chegar
-			    subject: 'Testando envio de e-mails', // O assunto
-			    html: '<strong>Olá</strong><p>Esta é a sua senha para o site ' + nome + ' : ' + senha + '</p>', // O HTMl do nosso e-mail
+			    from: 'Gerador de Senhas <geradordesenhassimpatia@gmail.com>',
+			    to: '<'+ email +'>',
+			    subject: 'Sua senha para o site ' + site + ' .',
+			    html: '<strong>Olá ' + nome + '</strong><p>Esta é a sua senha para o site ' + site + ' : ' + senha + '</p>',
 			}, function(err){
 			    if(err)
 			        throw err;
-			 
 			    console.log('E-mail enviado!');
 			});
 		},
@@ -32,9 +27,10 @@ module.exports = function() {
 		post: {
 			enviarEmail: function(request, response) {
 				var nome = request.body.nome;
+				var site = request.body.site;
 				var email = request.body.email;
 				var senha = request.body.senha;
-				Controller.enviarEmail(nome, email, senha);
+				Controller.enviarEmail(nome, site, email, senha);
 				response.render("form", { "success" : "Enviado!" });
 			}
 		}

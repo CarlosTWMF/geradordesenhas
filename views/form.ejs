@@ -47,18 +47,18 @@
                         <br />
                         <form action="/enviar" method="post">
                             <input type="hidden" value="<%= resultado %>" name="senha">
-                            <input type="text" class="form-control" placeholder="Nome do Site" name="nome" >
+                            <input type="text" class="form-control" placeholder="Qual o seu nome?" name="nome" >
+                            <br />
+                            <input type="text" class="form-control" placeholder="Esta senha será para qual site?" name="site" >
                             <br />
                             <input type="text" class="form-control" placeholder="voce@email.com" name="email" >
                             <br />
                             <button class="btn btn-default" type="submit">Envie para o meu e-mail!</button>
                         </form>
-                        
-
 					<% } %>
 
                     <% if(typeof(success) != 'undefined') { %>
-                            <h3><%= success %></h3>
+                        <h3><%= success %></h3>
                     <% } %>
                 </div>
 
