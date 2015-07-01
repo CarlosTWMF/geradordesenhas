@@ -5,7 +5,7 @@
 
 ####VII Projeto Integrador do Curso de Sistemas de Informação do Unipam (Centro Universitário de Patos de Minas) sob tutoria do Professor Filipe Guelber.
 
-O intuito do trabalho é aprender tecnologias de desenvolvimento que permitem à equipe construir aplicativos sólidos, testáveis e escaláveis, através da entrega contínua e de estatísticas que refletem a qualidade do projeto.
+O intuito deste projeto é aprender tecnologias de desenvolvimento que permitem à equipe construir aplicativos sólidos, testáveis e escaláveis, através da entrega contínua e de estatísticas que refletem a qualidade do projeto.
 
 ###Tecnologias Utilizadas
 * Linguagem Server-Side: Node.js.
