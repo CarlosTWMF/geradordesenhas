@@ -3,9 +3,9 @@
 [![Build Status](https://travis-ci.org/CarlosTWMF/geradordesenhas.svg?branch=master)](https://travis-ci.org/CarlosTWMF/geradordesenhas)
 [![Coverage Status](https://coveralls.io/repos/CarlosTWMF/geradordesenhas/badge.svg?branch=master)](https://coveralls.io/r/CarlosTWMF/geradordesenhas?branch=master)
 
-###VII Projeto Integrador do Curso de Sistemas de Informação do Unipam (Centro Universitário de Patos de Minas) sob tutoria do Professor Filipe Guelber.
+####VII Projeto Integrador do Curso de Sistemas de Informação do Unipam (Centro Universitário de Patos de Minas) sob tutoria do Professor Filipe Guelber.
 
-Tecnologias Utilizadas
+###Tecnologias Utilizadas
 ===========
 * Linguagem Server-Side: Node.js.
 * Controle de Versionamento: GitHub.
@@ -18,7 +18,7 @@ Tecnologias Utilizadas
 
 O intuito do trabalho é aprender tecnologias de desenvolvimento que permitem à equipe construir aplicativos sólidos, testáveis e escaláveis, através da entrega contínua e de estatísticas que refletem a qualidade do projeto.
 
-Alguns (somente alguns) links de referência
+###Alguns (somente alguns) links de referência
 ===========
 [GitHub](https://help.github.com/articles/generating-ssh-keys/#step-4-add-your-ssh-key-to-your-account)
 [Travis](http://docs.travis-ci.com/user/build-configuration/#The-Build-Matrix)
@@ -35,6 +35,6 @@ Alguns (somente alguns) links de referência
 [Protractor na prática](http://www.ng-newsletter.com/posts/practical-protractor.html)
 [Coveralls](https://coveralls.io/)
 
-Aplicação no Heroku
+###Aplicação no Heroku
 ===========
 [Gerador de Senhas](https://geradordesenhas.herokuapp.com/)
