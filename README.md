@@ -8,7 +8,6 @@
 O intuito do trabalho é aprender tecnologias de desenvolvimento que permitem à equipe construir aplicativos sólidos, testáveis e escaláveis, através da entrega contínua e de estatísticas que refletem a qualidade do projeto.
 
 ###Tecnologias Utilizadas
-===========
 * Linguagem Server-Side: Node.js.
 * Controle de Versionamento: GitHub.
 * Servidor de Integração Contínua: Travis-CI.
@@ -19,7 +18,6 @@ O intuito do trabalho é aprender tecnologias de desenvolvimento que permitem à
 * Container de Dependências: Docker.
 
 ###Alguns (somente alguns) links de referência
-===========
 [GitHub](https://help.github.com/articles/generating-ssh-keys/#step-4-add-your-ssh-key-to-your-account)
 
 [Travis](http://docs.travis-ci.com/user/build-configuration/#The-Build-Matrix)
@@ -47,5 +45,4 @@ O intuito do trabalho é aprender tecnologias de desenvolvimento que permitem à
 [Coveralls](https://coveralls.io/)
 
 ###Aplicação no Heroku
-===========
 [Gerador de Senhas](https://geradordesenhas.herokuapp.com/)
