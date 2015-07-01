@@ -33,7 +33,7 @@ module.exports = function() {
 			enviarEmail: function(request, response) {
 				var nome = request.body.nome;
 				var email = request.body.email;
-				enviarEmail(nome, email);
+				controller.enviarEmail(nome, email);
 				response.render("form", { "success" : "Enviado!" });
 			}
 		}
