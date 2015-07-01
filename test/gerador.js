@@ -1,17 +1,26 @@
 var controller = require('../controllers/gerador.js')();
 
 describe('Gerador', function() {
-	describe('Testa se as operações-núcleo funcionam corretamente.', function() {
-		describe('Somar', function() {
-			it('Deveria retornar 5 quando for passado 1 e 4.', function() {
-				var numero1 = 1;
-				var numero2 = 4;
-				
-				var resultado = controller.utils.calculos.somar(numero1, numero2);
-				
-				resultado.should.be.a.Number;
-				resultado.should.be.equal(5);
-			});
-		});
+	it('Deveria retornar uma senha 32 caracteres quando o campo for vazio.', function() {
+	
+		var resultado = controller.randomize("");
+		
+		resultado.should.be.a.String;
+		resultado.should.be.length(32);
 	});
 });
+
+
+describe('Gerador', function() {
+	it('Deveria retornar uma senha 10 caracteres.', function() {
+		var numero1 = 10;
+	
+		var resultado = controller.randomize(numero1);
+		
+		resultado.should.be.a.String;
+		resultado.should.be.length(10);
+	});
+});
+
+
+

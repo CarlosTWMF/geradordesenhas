@@ -4,16 +4,7 @@ module.exports = function(app) {
 	app.get('/', controller.get.index);
 
 	app.get('/gerar', controller.get.gerar);
-	//app.get('/sobre', controller.get.sobre);
+	app.get('/sobre', controller.get.sobre);
 	
-	app.post('/calcular', controller.post.calcular);
+	app.post('/randomize', controller.post.randomize);
 };
-/*
-module.exports = function(app) {
-	var controller = app.controllers.enviador;
-	
-	app.get('/enviar', controller.get.enviar);
-	//app.get('/sobre', controller.get.sobre);
-
-};
-*/
