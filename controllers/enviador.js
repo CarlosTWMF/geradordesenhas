@@ -31,7 +31,7 @@ module.exports = function() {
 				var email = request.body.email;
 				var senha = request.body.senha;
 				Controller.enviarEmail(nome, site, email, senha);
-				response.render("form", { "success" : "Enviado!" });
+				response.render("form", { "success" : "E-mail Enviado! Verifique sua caixa de entrada e volte sempre que precisar!" });
 			}
 		}
 	};
