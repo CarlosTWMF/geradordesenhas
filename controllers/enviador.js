@@ -15,7 +15,7 @@ module.exports = function() {
 			conta.sendMail({
 			    from: 'Gerador de Senhas <geradordesenhassimpatia@gmail.com>',
 			    to: '<'+ email +'>',
-			    subject: 'Sua senha para o site ' + site + ' .',
+			    subject: 'Sua senha para o site ' + site + '.',
 			    html: '<strong>Olá ' + nome + '</strong><p>Esta é a sua senha para o site ' + site + ' : ' + senha + '</p>',
 			}, function(err){
 			    if(err)
