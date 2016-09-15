@@ -6,7 +6,7 @@ describe('Gerador', function() {
 		var resultado = controller.randomize("");
 		
 		resultado.should.be.a.String;
-		resultado.should.be.length(33);
+		resultado.should.be.length(32);
 	});
 });
 
